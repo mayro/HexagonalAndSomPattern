@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  php:
+    container_name: "php-fpm"
+    build:
+      context: ./
+    environment:
+      - APP_ENV=${APP_ENV}
+    volumes:
+      - ${APP_FOLDER}:/var/www

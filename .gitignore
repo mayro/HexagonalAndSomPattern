@@ -1,0 +1,13 @@
+/vendor/
+/.env.local
+/bin/*
+!/bin/phpunit
+!/bin/console
+
+/public/bundles/
+
+/var/*
+!/var/.gitkeep
+
+/vendor/
+.idea/
