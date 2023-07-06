@@ -1,11 +1,7 @@
-version: '2'
+version: '3'
 
 services:
-  php:
-    container_name: "php-fpm"
-    build:
-      context: ./
-    environment:
-      - APP_ENV=${APP_ENV}
-    volumes:
-      - ${APP_FOLDER}:/var/www
+  app:
+    image: "hexo-demo-amira"
+    ports:
+      - "8080:80"
