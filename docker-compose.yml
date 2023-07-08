@@ -5,3 +5,20 @@ services:
     image: "hexo-demo-amira"
     ports:
       - "8080:80"
+  db:
+    image: "mysql:latest"
+    restart: always
+    volumes:
+        - db-data:/var/lib/mysql/
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: mydb
+        MYSQL_USER: amira
+        MYSQL_PASSWORD: amiraj
+    ports:
+      - "3307:3307"
+    expose:
+      - "3307"
+
+volumes:
+  db-data:

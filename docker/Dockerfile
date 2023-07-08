@@ -14,4 +14,3 @@ RUN cd /var/www && composer install
 
 WORKDIR /var/www/
 EXPOSE 80
-#RUN composer install
