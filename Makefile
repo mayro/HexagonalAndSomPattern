@@ -30,6 +30,7 @@ tests: ## Run all tests
 start: ## Start app
 	$(MAKE) docker-start
 docker-start:
+	$(DOCKER_COMPOSE) build --pull --no-cache
 	$(DOCKER_COMPOSE) up -d
 
 stop: ## Stop app

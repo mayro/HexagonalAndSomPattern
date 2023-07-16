@@ -10,7 +10,7 @@ services:
     volumes:
       - ./docker/apache.conf:/etc/apache2/sites-available/000-default.conf
       - .:/var/www/
-  db:
+  mysql:
     image: "mysql:latest"
     restart: always
     volumes:
@@ -18,10 +18,16 @@ services:
     environment:
         MYSQL_ROOT_PASSWORD: root
         MYSQL_DATABASE: mydb
-        MYSQL_USER: amira
-        MYSQL_PASSWORD: amiraj
     ports:
-      - "3308:3308"
-
+      - "3308:3306"
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - '8080:3308'
+    environment:
+      PMA_HOST: mysql
 volumes:
   db-data:
