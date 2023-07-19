@@ -26,7 +26,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - '8080:3308'
+      - '8083:90'
     environment:
       PMA_HOST: mysql
 volumes:

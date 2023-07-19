@@ -1,5 +1,8 @@
-controllers:
-    resource:
-        path: ../src/Application/Controller/
-        namespace: App\Application\Controller
-    type: attribute
+# config/routes.yaml
+api_get_user:
+    path:       /api/users/{id}
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Application\Controller\UserController::getById
+    methods:    GET|HEAD
+    requirements:
+        id: \d*
