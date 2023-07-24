@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Exception;
+namespace App\Authentication\Domain\Exception;
 
 use Symfony\Component\HttpFoundation\JsonResponse;
 

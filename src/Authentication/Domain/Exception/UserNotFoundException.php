@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Domain\Exception;
+namespace App\Authentication\Domain\Exception;
 
-use JetBrains\PhpStorm\Pure;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 

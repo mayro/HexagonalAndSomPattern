@@ -1,8 +1,8 @@
 <?php
-namespace App\Application\Controller;
+namespace App\Authentication\Application\Controller;
 
-use App\Domain\Exception\UserNotFoundException;
-use App\Domain\UserManager;
+use App\Authentication\Domain\Exception\UserNotFoundException;
+use App\Authentication\Domain\UserManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;

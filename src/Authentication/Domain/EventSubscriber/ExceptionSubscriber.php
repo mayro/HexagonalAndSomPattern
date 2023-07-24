@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\EventSubscriber;
+namespace App\Authentication\Domain\EventSubscriber;
 
-use App\Domain\Exception\NotFoundExceptionInterface;
-use App\Domain\Exception\UserNotFoundException;
+use App\Authentication\Domain\Exception\NotFoundExceptionInterface;
+use App\Authentication\Domain\Exception\UserNotFoundException;
 use JetBrains\PhpStorm\ArrayShape;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
